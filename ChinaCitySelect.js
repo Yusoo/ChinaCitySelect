@@ -503,7 +503,7 @@ var city_data = {
 	"澳门特别行政区": {"澳门半岛": ["花地玛堂区", "圣安多尼堂区", "大堂区", "望德堂区", "风顺堂区"], "澳门离岛": ["嘉模堂区", "圣方济各堂区"], "无堂区划分区域": ["路氹城"]}
 };
 
-function city_selector() {
+function china_city_select() {
 	var $province_container = $('#province');
 	var $city_container     = $('#city');
 	var $area_container     = $('#area');
