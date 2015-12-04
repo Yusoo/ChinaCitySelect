@@ -525,6 +525,9 @@ function china_city_select() {
 		// 切换
 		$province_container.change(function () {
 			$city_container.html('<option value="">请选择</option>');
+			if ($area_container.length) {
+				$area_container.html('<option value="">请选择</option>');
+			}
 			var now_province = $(this).val();
 			var provinces    = city_data[now_province];
 			for (city in provinces) {
