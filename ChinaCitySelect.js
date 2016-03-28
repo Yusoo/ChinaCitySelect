@@ -512,10 +512,9 @@ function china_city_select() {
 	if ($province_container.length) {
 		$province_container.html('<option value="">请选择</option>');
 
-		for (province in city_data) {
+		for (var province in city_data) {
 			$province_container.append('<option value="' + province + '">' + province + '</option>');
 		}
-
 	}
 
 
@@ -530,12 +529,13 @@ function china_city_select() {
 			}
 			var now_province = $(this).val();
 			var provinces    = city_data[now_province];
-			for (city in provinces) {
+			for (var city in provinces) {
 				$city_container.append('<option value="' + city + '">' + city + '</option>');
 			}
 		});
-
 	}
+	
+	
 	if ($area_container.length) {
 		$area_container.html('<option value="">请选择</option>');
 
@@ -547,7 +547,7 @@ function china_city_select() {
 			var now_city     = $(this).val();
 			var areas        = city_data[now_province][now_city];
 
-			for (i in areas) {
+			for (var i in areas) {
 				$area_container.append('<option value="' + areas[i] + '">' + areas[i] + '</option>');
 			}
 		});
