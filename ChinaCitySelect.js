@@ -508,15 +508,13 @@ function china_city_select() {
 	var $city_container     = $('#city');
 	var $area_container     = $('#area');
 
-
 	if ($province_container.length) {
 		$province_container.html('<option value="">请选择</option>');
 
-		for (var province in city_data) {
+		for (province in city_data) {
 			$province_container.append('<option value="' + province + '">' + province + '</option>');
 		}
 	}
-
 
 	if ($city_container.length) {
 		$city_container.html('<option value="">请选择</option>');
@@ -529,13 +527,12 @@ function china_city_select() {
 			}
 			var now_province = $(this).val();
 			var provinces    = city_data[now_province];
-			for (var city in provinces) {
+			for (city in provinces) {
 				$city_container.append('<option value="' + city + '">' + city + '</option>');
 			}
 		});
 	}
-	
-	
+
 	if ($area_container.length) {
 		$area_container.html('<option value="">请选择</option>');
 
@@ -547,11 +544,10 @@ function china_city_select() {
 			var now_city     = $(this).val();
 			var areas        = city_data[now_province][now_city];
 
-			for (var i in areas) {
+			for (i in areas) {
 				$area_container.append('<option value="' + areas[i] + '">' + areas[i] + '</option>');
 			}
 		});
-
 	}
 
 	// 默认值
